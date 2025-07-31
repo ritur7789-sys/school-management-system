@@ -36,11 +36,12 @@ This is a backend project built using Spring Boot. It includes features for mana
 
 ### How to Run:
 1. Start Redis and Kafka server on your system.
-2. Make sure PostgreSQL is running and database is created.
-3. Run the application using:
+2. Make sure PostgreSQL is running and a database named `school_db` is created.3. Run the application using:
    ```bash
    ./mvnw spring-boot:run
 4. Use Postman to test the APIs. Basic Auth is enabled for security.
+5. Important:
+   Before testing GET, PUT, or DELETE APIs, please make sure to first use the POST API to create a sample student or teacher.
 
 Notes:
 The scheduler runs every 30 seconds and prints a message to the console.
