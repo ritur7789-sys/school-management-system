@@ -44,6 +44,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/api/students").permitAll() // ✅ allow student signup
                         .requestMatchers(HttpMethod.POST, "/api/teachers").permitAll() // ✅ allow teacher signup
+                        .requestMatchers(HttpMethod.POST, "/api/department").permitAll()
                         .requestMatchers("/api/students/**").hasRole("STUDENT")
                         .requestMatchers("/api/teachers/**").hasRole("TEACHER")
                         .anyRequest().authenticated()
